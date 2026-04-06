@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Produtos</title>
+    <style>
+        .formata {
+            font-family: Consolas, monospace;
+            color: #BA55D3;
+            background: #DDA0DD;
+            text-align: center;
+            margin-bottom: 10px;
+            border: 2px solid rgb(123, 104, 238);
+            border-radius: 8px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+
+  <div id="root"></div>
+
+        <script type="text/babel">
+            const CardProduto = ({ produto, preco, estoque }) => {
+                return (
+                    <div className="formata">
+                        <h2>{produto}</h2>
+                        <p><strong>Preço:</strong> R$ {preco}</p>
+                        <p><strong>Estoque:</strong> {estoque} unidades</p>
+                    </div>
+                );
+            };
+            const App = () => {
+                return (
+                    <div>
+                        <Produto produto="Teclado" preco="150,00" estoque={15} />
+                        <Produto produto="Fandangos" preco="8,00" estoque={18} />
+                        <Produto produto="Iogurte" preco="12,00" estoque={33} />
+                    </div>
+                );
+            };
+
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<App />);
+        </script> //eu usei como base os outros exercicios feitos dentro de sala de aula para fazer está prova, alterando as cores dos pros (produto,preço e estoque). Criei um conteiner e props personalizados me baseando na aula de props mistas. Infelizmente meu VS code não está rodando o codigo no navegador, não sei qual é o problema do vs code.
+</body>
+</html>

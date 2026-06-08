@@ -11,20 +11,23 @@ export default function FooterBar() {
         backgroundColor: 'action.disabledBackground',
         display: 'flex',
         justifyContent: 'center',
-        position: 'fixed',  // posição fixa
-        bottom: 0,          // na parte de baixo da página
+        position: 'fixed', // posição fixa
+        bottom: 0,         // na parte de baixo da página
         width: '100vw'
       }}
     >
-      <Typography 
+      <Typography
         variant="caption"
         sx={{
-         '& a': {  // Altera a cor do link (a) dentro do Typography (&)
-           color: 'secondary.light'
-         }
-       }}
+          '& a': { // Altera a cor do link (a) dentro do Typography (&)
+            color: 'secondary.light'
+          }
+        }}
       >
-        Desenvolvido por Raphael Marcelo Campos Vieria
+        Desenvolvido por Raphael Marcelo Campos Vieira -{' '}
+        <a href="mailto:raphaelmarcelocamposvieira@gmail.com">
+          raphaelmarcelocamposvieira@gmail.com
+        </a>
       </Typography>
     </Box>
   </>

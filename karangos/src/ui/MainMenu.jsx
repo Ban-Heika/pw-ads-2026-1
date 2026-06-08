@@ -11,9 +11,11 @@ export default function MainMenu() {
   const menuId = `${id}-menu`;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -60,13 +62,21 @@ export default function MainMenu() {
           Listagem de veículos
         </MenuItem>
 
-
         <MenuItem
           onClick={handleClose}
           component={Link}
           to="/customers"
         >
           Listagem de clientes
+        </MenuItem>
+
+        {/* CÓDIGO NOVO AQUI: Item do Sobre o Autor */}
+        <MenuItem
+          onClick={handleClose}
+          component={Link}
+          to="/sobre"
+        >
+          Sobre o autor
         </MenuItem>
 
       </Menu>
